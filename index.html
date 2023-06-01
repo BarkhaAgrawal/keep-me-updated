@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"], input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form method="POST" action="/">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="interests">Interests:</label><br>
+        <input type="checkbox" name="interests" value="Art"> Art<br>
+        <input type="checkbox" name="interests" value="Biotechnology"> Biotechnology<br>
+        <input type="checkbox" name="interests" value="Climate Change and Environmental Science"> Climate Change and Environmental Science<br>
+        <input type="checkbox" name="interests" value="Cybersecurity and Privacy"> Cybersecurity and Privacy<br>
+        <input type="checkbox" name="interests" value="Data Science and Big Data Analytics"> Data Science and Big Data Analytics<br>
+        <input type="checkbox" name="interests" value="Healthcare and Medicine"> Healthcare and Medicine<br>
+        <input type="checkbox" name="interests" value="Internet of Things (IoT)"> Internet of Things (IoT)<br>
+        <input type="checkbox" name="interests" value="Renewable Energy and Sustainability"> Renewable Energy and Sustainability<br>
+        <input type="checkbox" name="interests" value="Robotics and Automation"> Robotics and Automation<br>
+        <input type="checkbox" name="interests" value="Social Sciences and Behavioral Economics"> Social Sciences and Behavioral Economics<br>
+        <input type="checkbox" name="interests" value="Artificial Intelligence and Machine Learning"> Artificial Intelligence and Machine Learning<br>
+        
+        <br><input type="submit" value="Register">
+    </form>
+</body>
+</html>
