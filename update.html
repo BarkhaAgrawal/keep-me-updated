@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Interests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="checkbox"] {
+            margin-top: 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Interests</h1>
+    <form method="POST" action="/update/{{ username }}">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="{{ username }}" readonly><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ email }}" readonly><br><br>
+
+        <label for="interests">Interests:</label><br>
+        <input type="checkbox" name="interests" value="Art" {% if 'Art' in interests %}checked{% endif %}> Art<br>
+        <input type="checkbox" name="interests" value="Biotechnology" {% if 'Biotechnology' in interests %}checked{% endif %}> Biotechnology<br>
+        <input type="checkbox" name="interests" value="Climate Change and Environmental Science" {% if 'Climate Change and Environmental Science' in interests %}checked{% endif %}> Climate Change and Environmental Science<br>
+        <input type="checkbox" name="interests" value="Cybersecurity and Privacy" {% if 'Cybersecurity and Privacy' in interests %}checked{% endif %}> Cybersecurity and Privacy<br>
+        <input type="checkbox" name="interests" value="Data Science and Big Data Analytics" {% if 'Data Science and Big Data Analytics' in interests %}checked{% endif %}> Data Science and Big Data Analytics<br>
+        <input type="checkbox" name="interests" value="Healthcare and Medicine" {% if 'Healthcare and Medicine' in interests %}checked{% endif %}> Healthcare and Medicine<br>
+        <input type="checkbox" name="interests" value="Internet of Things (IoT)" {% if 'Internet of Things (IoT)' in interests %}checked{% endif %}> Internet of Things (IoT)<br>
+        <input type="checkbox" name="interests" value="Renewable Energy and Sustainability" {% if 'Renewable Energy and Sustainability' in interests %}checked{% endif %}> Renewable Energy and Sustainability<br>
+        <input type="checkbox" name="interests" value="Robotics and Automation" {% if 'Robotics and Automation' in interests %}checked{% endif %}> Robotics and Automation<br>
+        <input type="checkbox" name="interests" value="Social Sciences and Behavioral Economics" {% if 'Social Sciences and Behavioral Economics' in interests %}checked{% endif %}> Social Sciences and Behavioral Economics<br>
+        <input type="checkbox" name="interests" value="Artificial Intelligence and Machine Learning" {% if 'Artificial Intelligence and Machine Learning' in interests %}checked{% endif %}> Artificial Intelligence and Machine Learning<br>
+        
+        <br><input type="submit" value="Update Interests">
+    </form>
+</body>
+</html>
